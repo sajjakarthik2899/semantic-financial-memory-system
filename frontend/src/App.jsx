@@ -1,8 +1,10 @@
 function App() {
   return (
-    <>
-      <h1>Smart Notes AI</h1>
-    </>
+    <div className="min-h-screen flex items-center justify-center">
+      <h1 className="text-4xl font-bold">
+        Smart Notes AI
+      </h1>
+    </div>
   );
 }
 

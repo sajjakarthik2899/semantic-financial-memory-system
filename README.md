@@ -3,6 +3,7 @@ LedgerPilot is an offline-first AI-powered semantic financial memory and analyti
 
 
 2-6-26
+-----------------------
 Pushed created files to github
 started with frontend
 
@@ -16,5 +17,52 @@ why this?
 5. Then run npm run dev
 6. You should see: Local: http://localhost:5173/
 7. Deleted App.css, Assests folder
-8. 
 
+
+3-6-26
+----------------------
+12am
+
+Setting up tailwind for frontend
+npm install tailwindcss @tailwindcss/vite
+
+1. Then opened frontend/vite.config.js and
+replaced with 
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+}) 
+
+2. Open src/index.css
+and replace with 
+
+@import "tailwindcss";
+
+3. Open src/App.jsx
+and replace the code with 
+
+function App() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <h1 className="text-4xl font-bold">
+        Smart Notes AI
+      </h1>
+    </div>
+  );
+}
+
+export default App;
+
+4. Run npm run dev
+
+
+Setting up router for React
+1. npm install react-router-dom
+and create a AppRoutes.jsx under the Routes folder
